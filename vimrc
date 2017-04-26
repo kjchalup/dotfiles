@@ -1,9 +1,11 @@
 " Krzysztof Chalupka's vimrc.
-" DONT PRETEND TO BE VIM:
+" DONT PRETEND TO BE VI:
 set nocompatible
 
 " SYNTAX HIGHLIGHTING:
 syntax enable
+set background=dark
+filetype indent plugin on
 
 " RECURSIVE SEARCH AND COMPLETION:
 " :ls -- list buffers.
@@ -44,5 +46,6 @@ set shiftwidth=4
 set cursorcolumn
 highlight CursorColumn ctermbg=234
 
-" DISPLAY LINE AND COL NUMBER IN STATUS LINE:
+" DISPLAY LINE AND COL NUMBERS:
 set ruler
+set number
