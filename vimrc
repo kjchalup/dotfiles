@@ -49,3 +49,6 @@ highlight CursorColumn ctermbg=234
 " DISPLAY LINE AND COL NUMBERS:
 set ruler
 set number
+
+" FULL PATH IN STATUS LINE:
+set statusline+=%F
