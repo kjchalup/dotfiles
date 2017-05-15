@@ -42,9 +42,9 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-" SHOW WHERE CURSOR COLUM IS:
+" SHOW WHERE CURSOR COLUM IS: 234
 set cursorcolumn
-highlight CursorColumn ctermbg=234
+highlight CursorColumn ctermbg=darkgrey
 
 " DISPLAY LINE AND COL NUMBERS:
 set ruler
@@ -52,3 +52,7 @@ set number
 
 " FULL PATH IN STATUS LINE:
 set statusline+=%F
+
+" SHOW 80 CHAR LIMIT:
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
