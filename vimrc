@@ -56,3 +56,10 @@ set statusline+=%F
 " SHOW 80 CHAR LIMIT:
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" ALL THE LINES BELOW ARE PLUGIN CONFIGS:
+call plug#begin('~/.vim/plugged')
+Plug 'fs111/pydoc.vim'
+call plug#end()
+
+let g:pydoc_window_lines=0.5
