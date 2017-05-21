@@ -1,4 +1,5 @@
 " Krzysztof Chalupka's vimrc.
+
 " DONT PRETEND TO BE VI:
 set nocompatible
 
@@ -44,7 +45,7 @@ set shiftwidth=4
 
 " SHOW WHERE CURSOR COLUM IS: 234
 set cursorcolumn
-highlight CursorColumn ctermbg=darkgrey
+highlight CursorColumn ctermbg=234
 
 " DISPLAY LINE AND COL NUMBERS:
 set ruler
@@ -57,9 +58,4 @@ set statusline+=%F
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-" ALL THE LINES BELOW ARE PLUGIN CONFIGS:
-call plug#begin('~/.vim/plugged')
-Plug 'fs111/pydoc.vim'
-call plug#end()
-
-let g:pydoc_window_lines=0.5
+color solarized8_dark

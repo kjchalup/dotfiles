@@ -1,0 +1,6 @@
+[user]
+    name = Krzysztof Chalupka
+    email = janchatko@gmail.com
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
