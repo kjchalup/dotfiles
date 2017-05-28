@@ -3,6 +3,10 @@
 " DONT PRETEND TO BE VI:
 set nocompatible
 
+" SEARCHES:
+set ignorecase smartcase
+set incsearch
+
 " SYNTAX HIGHLIGHTING:
 syntax enable
 set background=dark
@@ -42,6 +46,8 @@ nnoremap ,tex :-1read $HOME/.vim/.skeleton.tex<CR>
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set smarttab
+set autoindent
 
 " SHOW WHERE CURSOR COLUM IS: 234
 set cursorcolumn

@@ -36,5 +36,9 @@ udiskie &
 # no annoying bell
 xset -b
 
+# music demon
+[ ! -s ~/.config/mpd/pid ] && mpd
+
+# finally, turn Awesome on
 exec awesome
 
