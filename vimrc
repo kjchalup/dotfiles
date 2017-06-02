@@ -9,6 +9,7 @@ set incsearch
 
 " SYNTAX HIGHLIGHTING:
 syntax enable
+syntax on
 set background=dark
 filetype indent plugin on
 
@@ -57,11 +58,18 @@ highlight CursorColumn ctermbg=234
 set ruler
 set number
 
-" FULL PATH IN STATUS LINE:
-set statusline+=%F
-
 " SHOW 80 CHAR LIMIT:
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+highlight OverLength ctermbg=234 ctermfg=234 guibg=gray
 match OverLength /\%81v.\+/
+au FileType py set textwidth=79
 
 color solarized8_dark
+
+" PYTHON-SPECIFIC:
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#show_call_signatures = 2
+
+" STATUSLINE:
+set laststatus=2
+set statusline=%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P
