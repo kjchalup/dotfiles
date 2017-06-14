@@ -50,7 +50,7 @@ set shiftwidth=4
 set smarttab
 set autoindent
 
-" SHOW WHERE CURSOR COLUM IS: 234
+" SHOW WHERE CURSOR COLUM IS:
 set cursorcolumn
 highlight CursorColumn ctermbg=234
 
@@ -59,9 +59,14 @@ set ruler
 set number
 
 " SHOW 80 CHAR LIMIT:
-highlight OverLength ctermbg=234 ctermfg=234 guibg=gray
-match OverLength /\%81v.\+/
-au FileType py set textwidth=79
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#111111
+  autocmd BufEnter * match OverLength /\%80v.*/
+augroup END
+
+" highlight OverLength ctermbg=234 ctermfg=234 guibg=234 "guibg=gray
+" match OverLength /\%81v.\+/
+" au FileType py set textwidth=80
 
 color solarized8_dark
 
@@ -79,13 +84,3 @@ endfunction
 " STATUSLINE:
 set laststatus=2
 set statusline=%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-
