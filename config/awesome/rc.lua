@@ -1,4 +1,3 @@
-
 --[[
                                        
      Awesome WM configuration template 
@@ -67,14 +66,13 @@ local editor       = "vim" or os.getenv("EDITOR")
 local browser      = "chromium"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "home", "remote", "relax", "scrap" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
+    awful.layout.suit.fair
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
@@ -554,7 +552,10 @@ awful.rules.rules = {
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
-                     size_hints_honor = false
+                     size_hints_honor = false,
+                     maximized_horizontal = false,
+                     maximized_vertical = false,
+                     maximized = false
      }
     },
 
