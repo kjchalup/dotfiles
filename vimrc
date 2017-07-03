@@ -1,7 +1,9 @@
 " Krzysztof Chalupka's vimrc.
-
 " DONT PRETEND TO BE VI:
 set nocompatible
+
+" REMAP ESCAPE TO jj:
+inoremap jk <Esc>`^
 
 " SEARCHES:
 set ignorecase smartcase
@@ -25,6 +27,7 @@ set wildmenu
 " - g^] list all for ambiguous tags.
 " - ^t jump back up the tag stack. 
 command! MakeTags !ctags -R .
+set tags+=/usr/include/tags
 
 " AUTOCOMPLETE:
 " - ^x^n just current file.
@@ -68,7 +71,7 @@ augroup END
 " match OverLength /\%81v.\+/
 " au FileType py set textwidth=80
 
-color solarized8_dark
+colorscheme angr
 
 " PYTHON-SPECIFIC:
 let g:jedi#popup_on_dot = 0
