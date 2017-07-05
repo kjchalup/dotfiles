@@ -59,7 +59,7 @@ highlight CursorColumn ctermbg=234
 
 " DISPLAY LINE AND COL NUMBERS:
 set ruler
-set number
+set nonumber
 
 " SHOW 80 CHAR LIMIT:
 augroup vimrc_autocmds
@@ -71,7 +71,7 @@ augroup END
 " match OverLength /\%81v.\+/
 " au FileType py set textwidth=80
 
-colorscheme angr
+colorscheme PaperColor
 
 " PYTHON-SPECIFIC:
 let g:jedi#popup_on_dot = 0
